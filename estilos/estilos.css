@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: rgb(204, 204, 204);
+  background-image: linear-gradient(brown , orange);
   margin: 30px 50px;
   line-height: 1.4;
 }
@@ -22,6 +22,24 @@ body {
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border: 0;
+  animation-name: botones;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in;
+  animation-duration: 4s;
+  animation-delay: 4s;  
+}
+
+@keyframes botones{
+  0% {
+    width: 100px;
+  }
+  10% {
+    background-color: rgba(255, 94, 0, 0.84);
+  }
+  100% {
+    width: 100px;
+    background-color: rgba(100, 30, 12, 0.966);
+  }
 }
 
 img {
@@ -52,6 +70,20 @@ img {
   color: var(--dark);
   text-transform: uppercase;
   font-size: 1.1rem;
+  animation-duration: 2s;
+  animation-name: respiracion;
+  animation-delay: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes respiracion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .main-nav a:hover {
@@ -121,6 +153,18 @@ img {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  animation-name: cambiarcolor;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cambiarcolor{
+  from{
+    background-color: crimson;
+  }
+  to{
+    background-color: rgba(146, 73, 13, 0.951);
+  }
 }
 
 .box {
